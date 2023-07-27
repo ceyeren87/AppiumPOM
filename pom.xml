@@ -83,7 +83,7 @@
                     </goals>
                     <configuration>
                         <jsonFiles>
-                            <param>**/*.json</param>
+                            <param>target/cucumber/cucumber.json</param>
                         </jsonFiles>
                         <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
                         <inputDirectory>${project.build.directory}/cucumber</inputDirectory>
