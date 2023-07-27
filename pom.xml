@@ -64,7 +64,7 @@
         </argLine>
     <includes>
         <exclude>
-            **/CucumberRunner.java
+            **/Runner.java
         </exclude>
     </includes>
     </configuration>
