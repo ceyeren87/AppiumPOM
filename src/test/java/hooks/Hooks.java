@@ -27,7 +27,7 @@ public class Hooks {
 
     @AfterAll
     public static void stopServer(){
-        AppiumServer.stop();
+        //AppiumServer.stop();
     }
 
 }
