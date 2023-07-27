@@ -3,6 +3,9 @@ package runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -16,5 +19,6 @@ import org.junit.runner.RunWith;
         //tags = "@deneme",
         dryRun = false
 )
-public class Runner {
+
+public class Runner{
 }
