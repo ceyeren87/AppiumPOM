@@ -14,9 +14,9 @@ public class AppiumServer {
     public static void start() {
 
         AppiumDriverLocalService service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
-                .usingDriverExecutable(new File("C:\\Program Files\\nodejs")) // Node.js'nin yolu
+                .usingDriverExecutable(new File("C:/Program Files/nodejs/node.exe")) // Node.js'nin yolu
                 .withAppiumJS(new File("C:\\Users\\ceyer\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")) // Appium'un ana dosyasının yolu
-                .withArgument(GeneralServerFlag.LOG_LEVEL, "info")); // Log seviyesi (opsiyonel)
+                .withArgument(GeneralServerFlag.LOG_LEVEL, "info"));// Log seviyesi (opsiyonel)
 
         // Appium sunucusunu başlatın
 
