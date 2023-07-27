@@ -11,7 +11,8 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         plugin = {
                 "pretty",
-                "html:target/default-cucumber-reports.html"
+                "html:target/default-cucumber-reports.html",
+                "json:target/cucumber/cucumber.json"
         },
         monochrome = true,
         features = "./src/test/resources/features/hesaplar/MevduatHesapKapama.feature",
