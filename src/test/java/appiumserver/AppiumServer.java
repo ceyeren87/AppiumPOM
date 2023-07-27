@@ -8,7 +8,7 @@ import java.io.File;
 public class AppiumServer {
 
     static AppiumDriverLocalService server;
-    static String mainJSpath = "C:\\Users\\ceyer\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib/main.js";
+    static String mainJSpath = "C:/Users/ceyer/AppData/Roaming/npm/node_modules/appium/build/lib/main.js";
 
     public static void start() {
         if (server == null) {
