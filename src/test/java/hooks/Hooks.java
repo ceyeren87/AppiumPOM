@@ -13,7 +13,7 @@ public class Hooks {
     @BeforeAll
     public static void setUp() throws Exception {
         //Her testten once Appium server programatik olarak baslatiliyor...
-        AppiumServer.start();
+        //AppiumServer.start();
     }
 
     @After
@@ -27,7 +27,7 @@ public class Hooks {
 
     @AfterAll
     public static void stopServer(){
-        AppiumServer.stop();
+        //AppiumServer.stop();
     }
 
 }
