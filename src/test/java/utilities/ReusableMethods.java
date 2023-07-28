@@ -9,6 +9,8 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.time.Duration;
 
 public class ReusableMethods {
@@ -235,6 +237,27 @@ public class ReusableMethods {
     public static WebElement waitForVisibility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static void AdbKeyboardExample() {
+            try {
+                String textToType = "963852";
+                String adbCommand = "adb shell input text " + textToType;
+                ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", adbCommand);
+                processBuilder.redirectErrorStream(true);
+                Process process = processBuilder.start();
+
+                BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                }
+
+                int exitCode = process.waitFor();
+                System.out.println("Komut çıkış kodu: " + exitCode);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
     }
 
 }
