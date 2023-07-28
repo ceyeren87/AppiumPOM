@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json"
         },
         monochrome = true,
-        features = "./src/test/resources/features/hesaplar/MevduatHesapKapama.feature",
+        features = "./src/test/resources/features/hesaplar",
         glue = {"stepdefinitions", "hooks"},
         //tags = "@deneme",
         dryRun = false

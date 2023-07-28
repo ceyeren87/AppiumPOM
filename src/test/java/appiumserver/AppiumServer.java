@@ -1,4 +1,5 @@
 package appiumserver;
+import static utilities.ReusableMethods.*;
 
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;

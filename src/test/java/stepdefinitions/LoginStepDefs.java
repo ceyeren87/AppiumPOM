@@ -12,7 +12,8 @@ import java.util.List;
 
 import static utilities.ReusableMethods.*;
 
-public class LoginStepDefs {
+public class
+LoginStepDefs {
 
     static String mobileAndroidUser = "3410305";
 
@@ -23,6 +24,7 @@ public class LoginStepDefs {
         sendKeys(loginPage.musteriNumarasiGiris,userName);
         clickJS(loginPage.sifreClick);
         waitFor(2);
+        //Klavyeye basarak şifre giriyor
         AdbKeyboardExample();
         //Robot r = new Robot();
         //r.keyPress(KeyEvent.VK_9);
