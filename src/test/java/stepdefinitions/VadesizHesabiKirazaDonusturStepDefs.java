@@ -17,7 +17,7 @@ public class VadesizHesabiKirazaDonusturStepDefs {
     @When("Kiraz hesaba dönüştür butonuna basılır")
     public void kiraz_hesaba_dönüştür_butonuna_basılır() {
         clickJS(vadesizHesabiKirazaDonusturPage.kirazHesabaDonustur);
-        waitFor(7);
+        waitFor(10);
     }
 
     @When("Kiraz hesap sözleşmesini okudum onaylıyorum")
