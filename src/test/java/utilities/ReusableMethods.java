@@ -4,13 +4,15 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.awt.*;
+import java.io.*;
 import java.time.Duration;
 
 public class ReusableMethods {
@@ -259,5 +261,36 @@ public class ReusableMethods {
                 e.printStackTrace();
             }
     }
+
+
+    public static void BatDosyaCalistirmaOrnegi() {
+
+                try {
+                    // Bat dosyasını başlatma işlemini burada yapın
+                    Process process = Runtime.getRuntime().exec("C:\\Users\\ceyer\\OneDrive\\Masaüstü\\app.bat");
+
+                    // Bat dosyasının çıktılarını alın
+                    InputStream inputStream = process.getInputStream();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        System.out.println(line);
+                    }
+
+                    // Hata çıktılarını alın
+                    InputStream errorStream = process.getErrorStream();
+                    BufferedReader errorReader = new BufferedReader(new InputStreamReader(errorStream));
+                    String errorLine;
+                    while ((errorLine = errorReader.readLine()) != null) {
+                        System.err.println(errorLine);
+                    }
+
+                    // Bat dosyasının tamamlanmasını bekleyin
+                    process.waitFor();
+                } catch (IOException | InterruptedException e) {
+                    e.printStackTrace();
+            }
+    }
+
 
 }
