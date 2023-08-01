@@ -16,7 +16,7 @@ public class AppiumServer {
             AppiumServiceBuilder builder = new AppiumServiceBuilder();
             builder.withIPAddress("127.0.0.1");
                     builder.usingPort(4723)
-                    //.withAppiumJS(new File(mainJSpath))
+                    .withAppiumJS(new File(mainJSpath))
                     .usingDriverExecutable(new File("C:/Program Files/nodejs/node.exe"));
            server = AppiumDriverLocalService.buildService(builder);
            server.start();
